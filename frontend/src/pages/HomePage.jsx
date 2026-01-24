@@ -78,6 +78,10 @@ function HomePage() {
     page * visibleTaskLimit,
   );
 
+  if(visibleTasks.length === 0) {
+    handlePrev();
+  }
+
   const totalPages = Math.ceil(filteredTasks.length / visibleTaskLimit);
 
   return (
